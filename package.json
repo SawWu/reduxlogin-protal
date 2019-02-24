@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./ -d build",
+    "start": "npm run clean && parcel src/index.html -p 8888 --open",
+    "build": "npm run clean && parcel build src/index.html --public-url ./ -d dist",
+    "clean": "rimraf dist && rimraf .cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,13 +30,15 @@
     "postcss-modules": "^1.4.1",
     "react-hot-loader": "^4.7.1",
     "redux-devtools-extension": "^2.13.8",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "rimraf": "^2.6.3"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   }
