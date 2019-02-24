@@ -11,7 +11,8 @@ node_modules/
 
 .idea/*
 .cache/*
-build
+build/*
+dist/*
 
 
 
