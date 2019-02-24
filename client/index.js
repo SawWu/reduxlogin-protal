@@ -7,9 +7,11 @@ import {createStore, applyMiddleware} from 'redux';
 import rootReducer from './reducers';
 import { Provider } from 'react-redux';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = createStore(
     rootReducer,
+    applyMiddleware(thunk, composeWithDevTools, logger)
 );
 
 render(
